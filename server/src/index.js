@@ -27,16 +27,17 @@ const mocks = {
 
 async function startApolloServer() {
   const server = new ApolloServer({
-    schema: makeExecutableSchema({ typeDefs }),
-    mocks,
+    schema: addMocksToSchema({
+      schema: makeExecutableSchema({ typeDefs }),
+      mocks,
+    }),
   });
   const { url } = await startStandaloneServer(server);
+
   console.log(`
-        Server is running
-        Query at ${url}
-        `);
+        🚀  Server is running
+        📭  Query at ${url}
+      `);
 }
 
 startApolloServer();
-
-// yarn add @graphql-tools/mock @graphql-tools/schema
