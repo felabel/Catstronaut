@@ -8,6 +8,7 @@
     "start": "nodemon src/index"
   },
   "dependencies": {
+    "@apollo/datasource-rest": "^6.3.0",
     "@graphql-codegen/cli": "^5.0.3",
     "@graphql-codegen/typescript": "^4.1.0"
   },
@@ -18,5 +19,4 @@
   "author": "Raphael Terrier @R4ph-t",
   "license": "MIT",
   "private": true
-  
 }
