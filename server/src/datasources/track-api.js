@@ -10,6 +10,12 @@ class TrackAPI extends RESTDataSource {
   async getAuthor(authorId) {
     return this.get(`author/${authorId}`);
   }
+  async getTrack(trackId) {
+    return this.get(`track/${trackId}`);
+  }
+  getTrackModules(trackId) {
+    return this.get(`track/${trackId}/modules`);
+  }
 }
 
 export default TrackAPI;
