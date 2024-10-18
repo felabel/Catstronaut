@@ -18,6 +18,16 @@ export const typeDefs = gql`
     modules: [Module!]!
   }
 
+  type Mutation {
+    incrementTrackViews(id: ID!): IncrementTrackViewsResponse
+  }
+
+  type IncrementTrackViewsResponse {
+    code: Int!
+    success: Boolean!
+    message: String!
+    track: Track
+  }
   "Author of a complete Track or a Module"
   type Author {
     id: ID!
