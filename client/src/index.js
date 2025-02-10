@@ -5,7 +5,8 @@ import Pages from "./pages";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000",
+  // uri: "http://localhost:4000",
+  uri: "https://catstronaut-n6mh.onrender.com/",
   cache: new InMemoryCache(),
 });
 
